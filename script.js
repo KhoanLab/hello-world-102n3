@@ -1,72 +1,64 @@
-let a = 1;
-let b = 2;
-let c = a + b;
+// function!!
 
-// variables - containers for storing data
+// prompt()
+// alert()
+// console.log()
+// document.write()
 
+// Structure
 
-// console.log(a);
-// console.log(b);
-// console.log(c);
+// function functionName(parameters){ code to excute }  ---> all on one line
 
-// variables can be declared 4 ways
-// const --> contanst, don't be changed
-// let --> changeable value
-// var --> old way, don't do this
+// function functionName(parameters){
+//  code to excute
+//}
 
-// const myName = 'Khoan';
-// console.log(myName);
+// function
+function addTwoNumber(number1, number2){
+    let sum = number1 + number2;
+    return sum;
+}
 
-// let myFavColor = 'Blue';
-// console.log(myFavColor);
-// myFavColor = 'purple';
-// console.log(myFavColor);
+// Called/Invoking a function: call it by with name()
+let print = addTwoNumber(2, 3); // 5
 
-// DATA TYPES
-// string --> 'text' or "text" or '2' or "2"
-// number/integers --> 2 or 42 or 123345
-// boolean --> true or false
+console.log(print);
 
+function sayHi(){
+    let userName = prompt('What is your name?');  // ''
 
-// console.log('Hello world!');
-// console.log(32 + 8);
-// console.log(false);
-// console.log(3 + 2 == 4);
+    if (userName == ''){
+        alert("you didn't type a name...");
+        userName = prompt('Please tell me your name?'); // ''
+    }
 
-// Useful function
-// console.log() --> print infomation to the console
-// alert() --> give us a popup box
-// prompt()  --> how you can get info from the user
-// document.write()  --> how you will put content on your website
+    console.log(userName);  // ''
+    document.write('Hello and welcome to my page ', userName); // '' 
 
-// Conditional logic (if/else)
-// let userName = prompt('What is your name?');
-// console.log('userName=',userName);
+    return userName; // ''
+}
 
-// if (userName == 'Khoan'){
-//   // Code in here
-//   console.log('Hiya teach!');
-// } else if (userName == 'Hoa') {
-//   alert("TA's are some");
-// } else {
-//   alert('Hello and welcome, class');
-// } 
+// Called
+// let myName = sayHi(); //
 
-// Operators
-// let myNumber = 42; // number/integer
+// console.log('My Name is ',myName);
 
-// console.log(myNumber == 42); // true
-// console.log(myNumber == '42'); // number & string
-// console.log(myNumber === 42); // false
+function likesCookies(){
+    let response = prompt("Do you like cookie?");
 
+    if (response == 'yes'){
+        alert(" you're come to the right place");
+    } else if (response == 'no'){
+        alert(" What are you doing at a cookies shop website?")
+    } else {
+        alert(" I'm not sure what that means...");
+    }
 
-// let response = prompt('typing your password?');
-// console.log('response', response);
+    document.write(response);
 
-// if (response === 6){
-//   console.log('Right!!!');
-// } else {
-//   console.log('Fail!!!'); // case 
-// }
+    return response;
+}
 
-// console.log(typeof(response));
+let result = likesCookies();
+
+console.log('result', result);

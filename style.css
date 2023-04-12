@@ -97,3 +97,8 @@ footer{
     padding: 30px;
 }
 
+/* class: . */
+/* id: # */
+.text-red {
+    color: red;
+}
